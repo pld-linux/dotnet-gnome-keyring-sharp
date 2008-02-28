@@ -7,7 +7,7 @@ Summary(pl.UTF-8):	W pełni zarządzana implementacja libgnome-keyring
 Name:		dotnet-gnome-keyring-sharp
 Version:	96902
 Release:	1
-License:	LGPL
+License:	X11/MIT
 Group:		Libraries
 Source0:	gnome-keyring-sharp-r%{version}.tar.bz2
 # Source0-md5:	99d688281bf6cefbb343107bab646e18
