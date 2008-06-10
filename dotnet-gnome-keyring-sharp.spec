@@ -6,7 +6,7 @@ Summary:	A fully managed implementation of libgnome-keyring
 Summary(pl.UTF-8):	W pełni zarządzana implementacja libgnome-keyring
 Name:		dotnet-gnome-keyring-sharp
 Version:	96902
-Release:	1
+Release:	2
 License:	X11/MIT
 Group:		Libraries
 Source0:	gnome-keyring-sharp-r%{version}.tar.bz2
@@ -67,6 +67,7 @@ rm -rf $RPM_BUILD_ROOT
 	DESTDIR=$RPM_BUILD_ROOT \
 	monodocdir=%{_libdir}/monodoc/sources
 
+ln -s %{_pkgconfigdir}/gnome-keyring-sharp-1.0.pc $RPM_BUILD_ROOT%{_pkgconfigdir}/gnome-keyring-sharp.pc
 
 %clean
 rm -rf $RPM_BUILD_ROOT
