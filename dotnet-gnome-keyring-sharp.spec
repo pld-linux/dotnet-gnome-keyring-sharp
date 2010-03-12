@@ -1,12 +1,11 @@
 #
-#
 %include	/usr/lib/rpm/macros.mono
 #
 Summary:	A fully managed implementation of libgnome-keyring
 Summary(pl.UTF-8):	W pełni zarządzana implementacja libgnome-keyring
 Name:		dotnet-gnome-keyring-sharp
 Version:	96902
-Release:	2
+Release:	3
 License:	X11/MIT
 Group:		Libraries
 Source0:	gnome-keyring-sharp-r%{version}.tar.bz2
@@ -16,7 +15,7 @@ BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	dotnet-ndesk-dbus-sharp-devel >= 0.6.0
 BuildRequires:	mono-csharp >= 1.1.16.1
-BuildRequires:	monodoc >= 1.1.16
+BuildRequires:	monodoc >= 2.6
 BuildRequires:	pkgconfig
 BuildRequires:	rpmbuild(monoautodeps)
 Requires:	mono >= 1.1.16.1
@@ -37,7 +36,7 @@ Summary:	Development part of gnome-keyring-sharp
 Summary(pl.UTF-8):	Część gnome-keyring-sharp dla programistów
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
-Requires:	monodoc
+Requires:	monodoc >= 2.6
 Requires:	which
 Obsoletes:	dotnet-gtk-sharp2-gnome-devel
 Obsoletes:	gtk-sharp2-devel
@@ -65,7 +64,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT \
-	monodocdir=%{_libdir}/monodoc/sources
+	docsdir=%{_prefix}/lib/monodoc/sources
 
 ln -s %{_pkgconfigdir}/gnome-keyring-sharp-1.0.pc $RPM_BUILD_ROOT%{_pkgconfigdir}/gnome-keyring-sharp.pc
 
@@ -83,4 +82,4 @@ rm -rf $RPM_BUILD_ROOT
 %{_prefix}/lib/mono/gac/Gnome.Keyring/*/*.mdb
 %{_prefix}/lib/mono/gnome-keyring-sharp-1.0
 %{_pkgconfigdir}/*.pc
-%{_libdir}/monodoc/sources/Gnome.Keyring.*
+%{_prefix}/lib/monodoc/sources/Gnome.Keyring.*
