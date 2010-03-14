@@ -14,6 +14,7 @@ Source0:	gnome-keyring-sharp-r%{version}.tar.bz2
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	dotnet-ndesk-dbus-sharp-devel >= 0.6.0
+BuildRequires:	libtool
 BuildRequires:	mono-csharp >= 1.1.16.1
 BuildRequires:	monodoc >= 2.6
 BuildRequires:	pkgconfig
