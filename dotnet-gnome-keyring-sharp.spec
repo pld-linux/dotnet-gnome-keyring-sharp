@@ -4,16 +4,15 @@
 Summary:	A fully managed implementation of libgnome-keyring
 Summary(pl.UTF-8):	W pełni zarządzana implementacja libgnome-keyring
 Name:		dotnet-gnome-keyring-sharp
-Version:	96902
-Release:	3
+Version:	1.0.2
+Release:	1
 License:	X11/MIT
 Group:		Libraries
-Source0:	gnome-keyring-sharp-r%{version}.tar.bz2
-# Source0-md5:	99d688281bf6cefbb343107bab646e18
+Source0:	http://www.go-mono.com/archive/gnome-keyring-sharp/gnome-keyring-sharp-%{version}.tar.gz
+# Source0-md5:	f9a48319f3fe6123017b000d714d68b1
 #URL:		http://gtk-sharp.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	dotnet-ndesk-dbus-sharp-devel >= 0.6.0
 BuildRequires:	libtool
 BuildRequires:	mono-csharp >= 1.1.16.1
 BuildRequires:	monodoc >= 2.6
@@ -50,7 +49,7 @@ gnome-keyring-sharp.
 Pliki programistyczne i dokumentacja dla gnome-keyring-sharp.
 
 %prep
-%setup -q -n gnome-keyring-sharp
+%setup -q -n gnome-keyring-sharp-%{version}
 
 %build
 %{__libtoolize}
@@ -76,6 +75,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog
 %{_prefix}/lib/mono/gac/*
+%{_libdir}/libgnome-keyring-sharp-glue.so
 %exclude %{_prefix}/lib/mono/gac/Gnome.Keyring/*/*.mdb
 
 %files devel
