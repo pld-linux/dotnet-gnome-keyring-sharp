@@ -13,6 +13,7 @@ Source0:	http://www.go-mono.com/archive/gnome-keyring-sharp/gnome-keyring-sharp-
 #URL:		http://gtk-sharp.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
+BuildRequires:	dotnet-gtk-sharp2-devel
 BuildRequires:	libtool
 BuildRequires:	mono-csharp >= 1.1.16.1
 BuildRequires:	monodoc >= 2.6
