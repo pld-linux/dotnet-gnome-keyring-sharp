@@ -1,5 +1,4 @@
 #
-%include	/usr/lib/rpm/macros.mono
 #
 Summary:	A fully managed implementation of libgnome-keyring
 Summary(pl.UTF-8):	W pełni zarządzana implementacja libgnome-keyring
